@@ -1,0 +1,177 @@
+@font-face {
+  font-family: 'PTSans';
+  src: url('/fonts/PTN57F_W.eot');
+  src: url('/fonts/PTN57F_W.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/PTN57F_W.woff') format('woff'),
+       url('/fonts/PTN57F_W.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#dashboard
+{
+	background: #5389d6;
+	height: 50px;
+}
+
+#dashboard .menu li
+{
+	display: inline-block;
+}
+
+#dashboard .menu li
+{
+	padding: 15px;
+	border-left: 1px solid #2d6ecd;
+	border-right: 1px solid #2d6ecd;
+	margin-right: -5px;
+}
+
+#dashboard .menu li.active
+{
+	background-image: linear-gradient(to top, rgba(30,87,153,0.5), rgba(41,137,216,1), rgba(30,87,153,0.5));
+}
+
+#dashboard .menu li a
+{
+	color: white;
+}
+
+#dashboard .searchLine
+{
+	width: 260px;
+	margin-top: 5px;
+	height: 40px;
+	background-image: url('/image/lupa.png');
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 100% 50%;
+	padding-right: 35px;
+	padding-left: 5px;
+	font-size: 20px;
+}
+
+.project
+{
+	border: 1px solid black;
+	margin-bottom: 5px;
+}
+
+.issue
+{
+	border-bottom: 1px solid #eee;
+	margin-bottom: 5px;
+	padding-left: 0px;
+}
+
+.project div, .issue div
+{
+	float: left;
+	display: inline-block;
+}
+
+.project .info
+{
+	padding-top: 15px;
+	padding-left: 35px;
+}
+
+.project .info a
+{
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.project .issues
+{
+	margin-top: 15px;
+	margin-bottom: 0px;
+	float: right;
+	margin-right: -55px;
+}
+
+.issueLink
+{
+	color: #333;
+	text-decoration: underline;
+}
+
+.issueType
+{
+	margin-left: 100px;
+	margin-top: 42px;
+}
+
+.userM
+{
+	background-size: contain;
+	padding-left: 15px;
+	background-image: url('/image/man.png');
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 0% 50%;
+}
+
+.userW
+{
+	background-size: contain;
+	padding-left: 15px;
+	background-image: url('/image/woman.png');
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 0% 50%;
+}
+
+.red
+{
+	height: 15px;
+	width: 15px;
+	background: #e33933;
+	border-radius: 50%;
+	float: none;
+	border: 2px solid #dc0800;
+}
+
+.green
+{
+	height: 15px;
+	width: 15px;
+	background: #74c14a;
+	border-radius: 50%;
+	float: none;
+	border: 2px solid #51b11d;
+}
+
+.yellow
+{
+	height: 15px;
+	width: 15px;
+	background: #ffcc33;
+	border-radius: 50%;
+	float: none;
+	border: 2px solid #ffbf00;
+}
+
+/*LOGIN FORM*/
+
+.form-signin 
+{
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.loginLogo
+{
+	text-align: center;
+}
+
+.account h1, .account h2, .account h3
+{
+	font-family: 'PTSans';
+}
+
+.accountPhoto
+{
+	box-shadow: 0 0 10px 0 #2ea4ff;
+}

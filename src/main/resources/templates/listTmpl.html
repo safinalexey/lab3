@@ -1,0 +1,44 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.close').on('click', function(e){
+			e.preventDefault()
+			$(this).parent().parent().detach()
+		})
+	})
+</script>
+<table class="table table-bordered table-hover col-md-4" th:fragment="listdeasease(deaseaseIndividuals)">
+    <tr>
+	    <th>#</th>
+        <th>name</th>
+        <th></th>
+    </tr>
+    <tr th:each="deasease : ${deaseaseIndividuals}">
+        <td>1</td>
+        <td th:text="${deasease}"></td>
+        <td><a type="button" class="close" aria-hidden="true" th:href="@{/delete}">&times;</a></td>
+    </tr>
+</table>
+<table class="table table-bordered table-hover col-md-4" th:fragment="listorgan(organIndividuals)">
+    <tr>
+	    <th>#</th>
+        <th>name</th>
+        <th></th>
+    </tr>
+    <tr th:each="organ : ${organIndividuals}">
+        <td>1</td>
+        <td th:text="${organ}"></td>
+        <td><a type="button" class="close" aria-hidden="true" th:href="@{/delete}">&times;</a></td>
+    </tr>
+</table>
+<table class="table table-bordered table-hover col-md-4" th:fragment="listmedicine(medicineIndividuals)">
+    <tr>
+	    <th>#</th>
+        <th>name</th>
+        <th></th>
+    </tr>
+    <tr th:each="medicine : ${medicineIndividuals}">
+        <td>1</td>
+        <td th:text="${medicine}"></td>
+        <td><a type="button" class="close" aria-hidden="true" th:href="@{/delete}">&times;</a></td>
+    </tr>
+</table>

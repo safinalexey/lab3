@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head th:replace="defaultHeadTmpl :: defaultHead"/>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div th:replace="createIndividualsTmpl :: listdeasease"/>	
+				<div th:replace="createIndividualsTmpl :: listorgan"/>
+				<div th:replace="createIndividualsTmpl :: listmedicine"/>
+				<div th:replace="createIndividualsTmpl :: scriptBlock"/>
+			</div>
+		</div>
+	</body>
+</html>
