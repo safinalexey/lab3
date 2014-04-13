@@ -1,563 +1,1156 @@
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:medicines="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:untitled-ontology-2="http://www.semanticweb.org/алексей/ontologies/2014/2/untitled-ontology-2#" > 
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лимфатическая_система">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Сердечно-сосудистая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#взаимодействует_с">
-    <rdfs:range rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лекарственное_средство"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лекарственное_средство"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противовоспалительные_препараты">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Средства,_применяемые_при_заболеваниях_сосудистой_оболочки_глаза">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Сердечно-сосудистая_система">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Интеркуррентные_болезни">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Свеча">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Lungs">
-    <rdf:type rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Organ"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#семейная_подверженность">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Вискозоэластичные_соединения">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Препараты,_используемые_при_хирургических_вмешательствах_в_офтальмологии"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Местные_анестетики">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#manufacturer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Сенсорная_система">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Нервная_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Сосуды">
-    <rdf:type rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Сердечно-сосудистая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Кортикостероиды_в_комбинации_с_противомикробными_препаратами">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противовоспалительные_препараты_в_комбинации_с_противомикробными_препаратами"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#смертельность">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Симпатомиметики_для_лечения_глаукомы">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противоглаукомные_препараты_и_миотические_средства"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#химическое_название">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#противопоказания">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Гемопоэз‎">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Симпатомиметики">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Мидриатические_и_циклоплегические_средства"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#происхождение">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Психиатрические_заболевания">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#состав">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Микстура">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#условия_хранения">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Органы_кроветворения_и_иммунной_системы">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Настой">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#код_АТХ">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лекарственное_средство"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Глаз">
-    <rdf:type rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Внешние_органы"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Хирургические_болезни">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Пищеварительная_система_человека">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Порошок">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Инъекция">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#профилактика">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Диетические_заболевания">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#ухудшает">
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Бета-адреноблокаторы">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противоглаукомные_препараты_и_миотические_средства"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#фармакологическая_группа">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Ампула">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Таблетка">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#срок_годности">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#фармакологическое_действие">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Мидриатические_и_циклоплегические_средства">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Простагландинов_аналоги">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противоглаукомные_препараты_и_миотические_средства"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Отоларингологические_заболевания">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Симпатомиметики,_применяемые_в_качестве_деконгестантов">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Деконгестанты_и_противоаллергические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Опорно-двигательный_аппарат">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#тороговое_название">
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#улучшает">
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Деконгестанты_и_противоаллергические_препараты">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#показания_к_применению">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#побочные_действия">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Драже">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Венерические_болезни">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Нестероидные_противовоспалительные_препараты">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противовоспалительные_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Мочевыделительная_система">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Наследственные_болезни">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противоаллергические_препараты_другие">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Деконгестанты_и_противоаллергические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Педиатрические_заболевания">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#химическая_формула">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Метаболизм">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#название">
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Выделение">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Антибиотики">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противомикробные_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Гинекология">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Злокачественные_заболевания">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Паста">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Парасимпатомиметики">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противоглаукомные_препараты_и_миотические_средства"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противоглаукомные_препараты_и_миотические_средства">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Другие_препараты,_используемые_при_хирургических_вмешательствах_в_офтальмологии">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Препараты,_используемые_при_хирургических_вмешательствах_в_офтальмологии"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Гранула">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Раствор">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#source">
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Desease"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#цвет">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Препараты,_используемые_при_хирургических_вмешательствах_в_офтальмологии">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Другие_препараты_для_лечения_заболеваний_глаз">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#патеогенез">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#источник">
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Терморегуляция">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Покровная_система">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противовирусные_препараты">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противомикробные_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Красящие_средства">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Диагностические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#symptoms">
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Desease"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лекарственное_средство">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#течение_и_риск">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Другие_противоглаукомные_препараты">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противоглаукомные_препараты_и_миотические_средства"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#описание">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Ингибиторы_карбоангидразы">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противоглаукомные_препараты_и_миотические_средства"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#препятствует_возникновению">
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лекарственное_средство"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Flu">
-    <medicines:has_influence rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Lungs"/>
-    <medicines:source>вирус</medicines:source>
-    <medicines:source>bacteria</medicines:source>
-    <medicines:symptoms>кашель</medicines:symptoms>
-    <medicines:symptoms>температура</medicines:symptoms>
-    <medicines:symptoms>headache</medicines:symptoms>
-    <rdf:type rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Desease"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Речь">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Диагностические_препараты">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Память">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#механизм_развития">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#влияет_на">
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Орган"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лекарственное_средство"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Орган">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Эндокринная_система">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Глазные_болезни">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Антихолинэргические_средства">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Мидриатические_и_циклоплегические_средства"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#симптомы">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#производитель">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противовоспалительные_препараты_в_комбинации_с_противомикробными_препаратами">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#действующее_вещество">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#особые_указания">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Внутренние_болезни">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Репродуктивная_система">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Внешние_органы">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Орган"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Мышление">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#выпускается_в_виде">
-    <rdfs:range rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лекарственное_средство"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Кортикостероиды">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противовоспалительные_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#классификация">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Экстракт">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Мазь">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Дыхание">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Organ">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Кожные_болезни">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Капсула">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#латинское_название">
-    <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#название"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#лечит">
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лекарственное_средство"/>
-    <rdfs:range rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Нервная_система">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#передозировка">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Medicine">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Дыхательная_система">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противомикробные_препараты">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#этиологический_фактор">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Сульфаниламиды">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противомикробные_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Desease">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Линимент">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Фторхинолоны">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противомикробные_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Внутренние_органы">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Орган"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Прочие_противомикробные_препараты">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противомикробные_препараты"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Ревалгин">
-    <medicines:улучшает rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Сосуды"/>
-    <medicines:название xml:lang="ru">Ревалгин</medicines:название>
-    <medicines:латинское_название xml:lang="en">Revalgin</medicines:латинское_название>
-    <rdf:type rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Medicine"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#has_influence">
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лекарственное_средство"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#способ_приминения_и_дозы">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Восприятие">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Инфекционные_болезни">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY medicines "http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#" >
+    <!ENTITY untitled-ontology-2 "http://www.semanticweb.org/алексей/ontologies/2014/2/untitled-ontology-2#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#"
+     xml:base="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/алексей/ontologies/2014/2/untitled-ontology-2#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:medicines="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alexey/ontologies/2014/2/medicines"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#has_influence -->
+
+    <owl:ObjectProperty rdf:about="&medicines;has_influence">
+        <rdfs:domain rdf:resource="&medicines;Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#взаимодействует_с -->
+
+    <owl:ObjectProperty rdf:about="&medicines;взаимодействует_с">
+        <rdfs:range rdf:resource="&medicines;Лекарственное_средство"/>
+        <rdfs:domain rdf:resource="&medicines;Лекарственное_средство"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#влияет_на -->
+
+    <owl:ObjectProperty rdf:about="&medicines;влияет_на">
+        <rdfs:domain rdf:resource="&medicines;Заболевание"/>
+        <rdfs:domain rdf:resource="&medicines;Лекарственное_средство"/>
+        <rdfs:range rdf:resource="&medicines;Орган"/>
+        <rdfs:range rdf:resource="&medicines;Физиологическая_система"/>
+        <rdfs:range rdf:resource="&medicines;Физиологический_процесс"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#выпускается_в_виде -->
+
+    <owl:ObjectProperty rdf:about="&medicines;выпускается_в_виде">
+        <rdfs:domain rdf:resource="&medicines;Лекарственное_средство"/>
+        <rdfs:range rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#лечит -->
+
+    <owl:ObjectProperty rdf:about="&medicines;лечит">
+        <rdfs:range rdf:resource="&medicines;Заболевание"/>
+        <rdfs:domain rdf:resource="&medicines;Лекарственное_средство"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#препятствует_возникновению -->
+
+    <owl:ObjectProperty rdf:about="&medicines;препятствует_возникновению">
+        <rdfs:range rdf:resource="&medicines;Заболевание"/>
+        <rdfs:domain rdf:resource="&medicines;Лекарственное_средство"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#улучшает -->
+
+    <owl:ObjectProperty rdf:about="&medicines;улучшает">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#ухудшает -->
+
+    <owl:ObjectProperty rdf:about="&medicines;ухудшает">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#manufacturer -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;manufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#source -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;source">
+        <rdfs:domain rdf:resource="&medicines;Disease"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#symptoms -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;symptoms">
+        <rdfs:domain rdf:resource="&medicines;Disease"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#действующее_вещество -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;действующее_вещество"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#источник -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;источник">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#классификация -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;классификация"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#код_АТХ -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;код_АТХ">
+        <rdfs:domain rdf:resource="&medicines;Лекарственное_средство"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#латинское_название -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;латинское_название">
+        <owl:equivalentProperty rdf:resource="&medicines;название"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#механизм_развития -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;механизм_развития"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#название -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;название">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#описание -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;описание"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#особые_указания -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;особые_указания"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#патеогенез -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;патеогенез"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#передозировка -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;передозировка"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#побочные_действия -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;побочные_действия"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#показания_к_применению -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;показания_к_применению"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#производитель -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;производитель"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#происхождение -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;происхождение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#противопоказания -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;противопоказания"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#профилактика -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;профилактика"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#семейная_подверженность -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;семейная_подверженность"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#симптомы -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;симптомы"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#смертельность -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;смертельность"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#состав -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;состав"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#способ_приминения_и_дозы -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;способ_приминения_и_дозы"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#срок_годности -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;срок_годности"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#течение_и_риск -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;течение_и_риск"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#тороговое_название -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;тороговое_название">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#условия_хранения -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;условия_хранения"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#фармакологическая_группа -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;фармакологическая_группа"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#фармакологическое_действие -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;фармакологическое_действие"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#химическая_формула -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;химическая_формула"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#химическое_название -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;химическое_название"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#цвет -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;цвет"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#этиологический_фактор -->
+
+    <owl:DatatypeProperty rdf:about="&medicines;этиологический_фактор"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Disease -->
+
+    <owl:Class rdf:about="&medicines;Disease"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Medicine -->
+
+    <owl:Class rdf:about="&medicines;Medicine"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Organ -->
+
+    <owl:Class rdf:about="&medicines;Organ"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Ампула -->
+
+    <owl:Class rdf:about="&medicines;Ампула">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Антибиотики -->
+
+    <owl:Class rdf:about="&medicines;Антибиотики">
+        <rdfs:subClassOf rdf:resource="&medicines;Противомикробные_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Антихолинэргические_средства -->
+
+    <owl:Class rdf:about="&medicines;Антихолинэргические_средства">
+        <rdfs:subClassOf rdf:resource="&medicines;Мидриатические_и_циклоплегические_средства"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Бета-адреноблокаторы -->
+
+    <owl:Class rdf:about="&medicines;Бета-адреноблокаторы">
+        <rdfs:subClassOf rdf:resource="&medicines;Противоглаукомные_препараты_и_миотические_средства"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Венерические_болезни -->
+
+    <owl:Class rdf:about="&medicines;Венерические_болезни">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Вискозоэластичные_соединения -->
+
+    <owl:Class rdf:about="&medicines;Вискозоэластичные_соединения">
+        <rdfs:subClassOf rdf:resource="&medicines;Препараты,_используемые_при_хирургических_вмешательствах_в_офтальмологии"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Внешние_органы -->
+
+    <owl:Class rdf:about="&medicines;Внешние_органы">
+        <rdfs:subClassOf rdf:resource="&medicines;Орган"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Внутренние_болезни -->
+
+    <owl:Class rdf:about="&medicines;Внутренние_болезни">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Внутренние_органы -->
+
+    <owl:Class rdf:about="&medicines;Внутренние_органы">
+        <rdfs:subClassOf rdf:resource="&medicines;Орган"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Восприятие -->
+
+    <owl:Class rdf:about="&medicines;Восприятие">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Выделение -->
+
+    <owl:Class rdf:about="&medicines;Выделение">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Гемопоэз‎ -->
+
+    <owl:Class rdf:about="&medicines;Гемопоэз‎">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Гинекология -->
+
+    <owl:Class rdf:about="&medicines;Гинекология">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Глазные_болезни -->
+
+    <owl:Class rdf:about="&medicines;Глазные_болезни">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Гранула -->
+
+    <owl:Class rdf:about="&medicines;Гранула">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Деконгестанты_и_противоаллергические_препараты -->
+
+    <owl:Class rdf:about="&medicines;Деконгестанты_и_противоаллергические_препараты">
+        <rdfs:subClassOf rdf:resource="&medicines;Офтальмологические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Диагностические_препараты -->
+
+    <owl:Class rdf:about="&medicines;Диагностические_препараты">
+        <rdfs:subClassOf rdf:resource="&medicines;Офтальмологические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Диетические_заболевания -->
+
+    <owl:Class rdf:about="&medicines;Диетические_заболевания">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Драже -->
+
+    <owl:Class rdf:about="&medicines;Драже">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Другие_препараты,_используемые_при_хирургических_вмешательствах_в_офтальмологии -->
+
+    <owl:Class rdf:about="&medicines;Другие_препараты,_используемые_при_хирургических_вмешательствах_в_офтальмологии">
+        <rdfs:subClassOf rdf:resource="&medicines;Препараты,_используемые_при_хирургических_вмешательствах_в_офтальмологии"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Другие_препараты_для_лечения_заболеваний_глаз -->
+
+    <owl:Class rdf:about="&medicines;Другие_препараты_для_лечения_заболеваний_глаз">
+        <rdfs:subClassOf rdf:resource="&medicines;Офтальмологические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Другие_противоглаукомные_препараты -->
+
+    <owl:Class rdf:about="&medicines;Другие_противоглаукомные_препараты">
+        <rdfs:subClassOf rdf:resource="&medicines;Противоглаукомные_препараты_и_миотические_средства"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Дыхание -->
+
+    <owl:Class rdf:about="&medicines;Дыхание">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Дыхательная_система -->
+
+    <owl:Class rdf:about="&medicines;Дыхательная_система">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Заболевание -->
+
+    <owl:Class rdf:about="&medicines;Заболевание"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Злокачественные_заболевания -->
+
+    <owl:Class rdf:about="&medicines;Злокачественные_заболевания">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Ингибиторы_карбоангидразы -->
+
+    <owl:Class rdf:about="&medicines;Ингибиторы_карбоангидразы">
+        <rdfs:subClassOf rdf:resource="&medicines;Противоглаукомные_препараты_и_миотические_средства"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Интеркуррентные_болезни -->
+
+    <owl:Class rdf:about="&medicines;Интеркуррентные_болезни">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Инфекционные_болезни -->
+
+    <owl:Class rdf:about="&medicines;Инфекционные_болезни">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Инъекция -->
+
+    <owl:Class rdf:about="&medicines;Инъекция">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Капсула -->
+
+    <owl:Class rdf:about="&medicines;Капсула">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Кожные_болезни -->
+
+    <owl:Class rdf:about="&medicines;Кожные_болезни">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Кортикостероиды -->
+
+    <owl:Class rdf:about="&medicines;Кортикостероиды">
+        <rdfs:subClassOf rdf:resource="&medicines;Противовоспалительные_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Кортикостероиды_в_комбинации_с_противомикробными_препаратами -->
+
+    <owl:Class rdf:about="&medicines;Кортикостероиды_в_комбинации_с_противомикробными_препаратами">
+        <rdfs:subClassOf rdf:resource="&medicines;Противовоспалительные_препараты_в_комбинации_с_противомикробными_препаратами"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Красящие_средства -->
+
+    <owl:Class rdf:about="&medicines;Красящие_средства">
+        <rdfs:subClassOf rdf:resource="&medicines;Диагностические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лекарственное_средство -->
+
+    <owl:Class rdf:about="&medicines;Лекарственное_средство"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Лимфатическая_система -->
+
+    <owl:Class rdf:about="&medicines;Лимфатическая_система">
+        <rdfs:subClassOf rdf:resource="&medicines;Сердечно-сосудистая_система"/>
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Линимент -->
+
+    <owl:Class rdf:about="&medicines;Линимент">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Мазь -->
+
+    <owl:Class rdf:about="&medicines;Мазь">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Местные_анестетики -->
+
+    <owl:Class rdf:about="&medicines;Местные_анестетики">
+        <rdfs:subClassOf rdf:resource="&medicines;Офтальмологические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Метаболизм -->
+
+    <owl:Class rdf:about="&medicines;Метаболизм">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Мидриатические_и_циклоплегические_средства -->
+
+    <owl:Class rdf:about="&medicines;Мидриатические_и_циклоплегические_средства">
+        <rdfs:subClassOf rdf:resource="&medicines;Офтальмологические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Микстура -->
+
+    <owl:Class rdf:about="&medicines;Микстура">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Мочевыделительная_система -->
+
+    <owl:Class rdf:about="&medicines;Мочевыделительная_система">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Мышление -->
+
+    <owl:Class rdf:about="&medicines;Мышление">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Наследственные_болезни -->
+
+    <owl:Class rdf:about="&medicines;Наследственные_болезни">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Настой -->
+
+    <owl:Class rdf:about="&medicines;Настой">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Нервная_система -->
+
+    <owl:Class rdf:about="&medicines;Нервная_система">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Нестероидные_противовоспалительные_препараты -->
+
+    <owl:Class rdf:about="&medicines;Нестероидные_противовоспалительные_препараты">
+        <rdfs:subClassOf rdf:resource="&medicines;Противовоспалительные_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Опорно-двигательный_аппарат -->
+
+    <owl:Class rdf:about="&medicines;Опорно-двигательный_аппарат">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Орган -->
+
+    <owl:Class rdf:about="&medicines;Орган"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Органы_кроветворения_и_иммунной_системы -->
+
+    <owl:Class rdf:about="&medicines;Органы_кроветворения_и_иммунной_системы">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Отоларингологические_заболевания -->
+
+    <owl:Class rdf:about="&medicines;Отоларингологические_заболевания">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Офтальмологические_препараты -->
+
+    <owl:Class rdf:about="&medicines;Офтальмологические_препараты">
+        <rdfs:subClassOf rdf:resource="&medicines;Лекарственное_средство"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Память -->
+
+    <owl:Class rdf:about="&medicines;Память">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Парасимпатомиметики -->
+
+    <owl:Class rdf:about="&medicines;Парасимпатомиметики">
+        <rdfs:subClassOf rdf:resource="&medicines;Противоглаукомные_препараты_и_миотические_средства"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Паста -->
+
+    <owl:Class rdf:about="&medicines;Паста">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Педиатрические_заболевания -->
+
+    <owl:Class rdf:about="&medicines;Педиатрические_заболевания">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Пищеварительная_система_человека -->
+
+    <owl:Class rdf:about="&medicines;Пищеварительная_система_человека">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Покровная_система -->
+
+    <owl:Class rdf:about="&medicines;Покровная_система">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Порошок -->
+
+    <owl:Class rdf:about="&medicines;Порошок">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Препараты,_используемые_при_хирургических_вмешательствах_в_офтальмологии -->
+
+    <owl:Class rdf:about="&medicines;Препараты,_используемые_при_хирургических_вмешательствах_в_офтальмологии">
+        <rdfs:subClassOf rdf:resource="&medicines;Офтальмологические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Простагландинов_аналоги -->
+
+    <owl:Class rdf:about="&medicines;Простагландинов_аналоги">
+        <rdfs:subClassOf rdf:resource="&medicines;Противоглаукомные_препараты_и_миотические_средства"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противоаллергические_препараты_другие -->
+
+    <owl:Class rdf:about="&medicines;Противоаллергические_препараты_другие">
+        <rdfs:subClassOf rdf:resource="&medicines;Деконгестанты_и_противоаллергические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противовирусные_препараты -->
+
+    <owl:Class rdf:about="&medicines;Противовирусные_препараты">
+        <rdfs:subClassOf rdf:resource="&medicines;Противомикробные_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противовоспалительные_препараты -->
+
+    <owl:Class rdf:about="&medicines;Противовоспалительные_препараты">
+        <rdfs:subClassOf rdf:resource="&medicines;Офтальмологические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противовоспалительные_препараты_в_комбинации_с_противомикробными_препаратами -->
+
+    <owl:Class rdf:about="&medicines;Противовоспалительные_препараты_в_комбинации_с_противомикробными_препаратами">
+        <rdfs:subClassOf rdf:resource="&medicines;Офтальмологические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противоглаукомные_препараты_и_миотические_средства -->
+
+    <owl:Class rdf:about="&medicines;Противоглаукомные_препараты_и_миотические_средства">
+        <rdfs:subClassOf rdf:resource="&medicines;Офтальмологические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Противомикробные_препараты -->
+
+    <owl:Class rdf:about="&medicines;Противомикробные_препараты">
+        <rdfs:subClassOf rdf:resource="&medicines;Офтальмологические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Прочие_противомикробные_препараты -->
+
+    <owl:Class rdf:about="&medicines;Прочие_противомикробные_препараты">
+        <rdfs:subClassOf rdf:resource="&medicines;Противомикробные_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Психиатрические_заболевания -->
+
+    <owl:Class rdf:about="&medicines;Психиатрические_заболевания">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Раствор -->
+
+    <owl:Class rdf:about="&medicines;Раствор">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Репродуктивная_система -->
+
+    <owl:Class rdf:about="&medicines;Репродуктивная_система">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Речь -->
+
+    <owl:Class rdf:about="&medicines;Речь">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Свеча -->
+
+    <owl:Class rdf:about="&medicines;Свеча">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Сенсорная_система -->
+
+    <owl:Class rdf:about="&medicines;Сенсорная_система">
+        <rdfs:subClassOf rdf:resource="&medicines;Нервная_система"/>
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Сердечно-сосудистая_система -->
+
+    <owl:Class rdf:about="&medicines;Сердечно-сосудистая_система">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Симпатомиметики -->
+
+    <owl:Class rdf:about="&medicines;Симпатомиметики">
+        <rdfs:subClassOf rdf:resource="&medicines;Мидриатические_и_циклоплегические_средства"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Симпатомиметики,_применяемые_в_качестве_деконгестантов -->
+
+    <owl:Class rdf:about="&medicines;Симпатомиметики,_применяемые_в_качестве_деконгестантов">
+        <rdfs:subClassOf rdf:resource="&medicines;Деконгестанты_и_противоаллергические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Симпатомиметики_для_лечения_глаукомы -->
+
+    <owl:Class rdf:about="&medicines;Симпатомиметики_для_лечения_глаукомы">
+        <rdfs:subClassOf rdf:resource="&medicines;Противоглаукомные_препараты_и_миотические_средства"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Средства,_применяемые_при_заболеваниях_сосудистой_оболочки_глаза -->
+
+    <owl:Class rdf:about="&medicines;Средства,_применяемые_при_заболеваниях_сосудистой_оболочки_глаза">
+        <rdfs:subClassOf rdf:resource="&medicines;Офтальмологические_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Сульфаниламиды -->
+
+    <owl:Class rdf:about="&medicines;Сульфаниламиды">
+        <rdfs:subClassOf rdf:resource="&medicines;Противомикробные_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Таблетка -->
+
+    <owl:Class rdf:about="&medicines;Таблетка">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Терморегуляция -->
+
+    <owl:Class rdf:about="&medicines;Терморегуляция">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологическая_система -->
+
+    <owl:Class rdf:about="&medicines;Физиологическая_система"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Физиологический_процесс -->
+
+    <owl:Class rdf:about="&medicines;Физиологический_процесс"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Форма_выпуска -->
+
+    <owl:Class rdf:about="&medicines;Форма_выпуска"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Фторхинолоны -->
+
+    <owl:Class rdf:about="&medicines;Фторхинолоны">
+        <rdfs:subClassOf rdf:resource="&medicines;Противомикробные_препараты"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Хирургические_болезни -->
+
+    <owl:Class rdf:about="&medicines;Хирургические_болезни">
+        <rdfs:subClassOf rdf:resource="&medicines;Заболевание"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Экстракт -->
+
+    <owl:Class rdf:about="&medicines;Экстракт">
+        <rdfs:subClassOf rdf:resource="&medicines;Форма_выпуска"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Эндокринная_система -->
+
+    <owl:Class rdf:about="&medicines;Эндокринная_система">
+        <rdfs:subClassOf rdf:resource="&medicines;Физиологическая_система"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Flu -->
+
+    <owl:NamedIndividual rdf:about="&medicines;Flu">
+        <rdf:type rdf:resource="&medicines;Disease"/>
+        <source>вирус</source>
+        <source>bacteria</source>
+        <symptoms>кашель</symptoms>
+        <symptoms>температура</symptoms>
+        <symptoms>headache</symptoms>
+        <has_influence rdf:resource="&medicines;Lungs"/>
+        <has_influence rdf:resource="&medicines;Сосуды"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Lungs -->
+
+    <owl:NamedIndividual rdf:about="&medicines;Lungs">
+        <rdf:type rdf:resource="&medicines;Organ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Глаз -->
+
+    <owl:NamedIndividual rdf:about="&medicines;Глаз">
+        <rdf:type rdf:resource="&medicines;Внешние_органы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Ревалгин -->
+
+    <owl:NamedIndividual rdf:about="&medicines;Ревалгин">
+        <rdf:type rdf:resource="&medicines;Medicine"/>
+        <латинское_название xml:lang="en">Revalgin</латинское_название>
+        <название xml:lang="ru">Ревалгин</название>
+        <улучшает rdf:resource="&medicines;Сосуды"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Сосуды -->
+
+    <owl:NamedIndividual rdf:about="&medicines;Сосуды">
+        <rdf:type rdf:resource="&medicines;Сердечно-сосудистая_система"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

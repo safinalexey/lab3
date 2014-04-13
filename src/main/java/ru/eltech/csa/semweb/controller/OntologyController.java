@@ -90,7 +90,7 @@ public class OntologyController {
         OntProperty sourceProp  = diseaseOntModelService.getOntProperty("http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#source");
         OntProperty symptomProp = diseaseOntModelService.getOntProperty("http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#symptoms");
         ObjectProperty objProp  = diseaseOntModelService.getObjectProperty("http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#has_influence");
-        System.out.println(objProp.getLocalName());
+   //     System.out.println(objProp.getLocalName());
 
         for (NodeIterator iter2 = inst.listPropertyValues(sourceProp);iter2.hasNext();) {
             String aa = new String(iter2.next().toString());
@@ -100,17 +100,21 @@ public class OntologyController {
             String aa = new String(iter2.next().toString());
             symptomList.add(aa);
         }
-        //for (NodeIterator iter2 = inst.listPropertyValues(objProp);iter2.hasNext();) {
-            //String aa = new String(iter2.next().toString());
-            //System.out.println(iter2);
-            //objPropList.add(aa);
-        //}
-
-        System.out.println(inst.listPropertyValues(objProp).toList().toArray()[0]);
+        for (NodeIterator iter2 = inst.listPropertyValues(objProp);iter2.hasNext();) {
+            String aa = new String(iter2.next().toString());
+            int pos = aa.indexOf("#") + 1;
+            String objPropValue = new String(aa.substring(pos,aa.length()));
+            objPropList.add(objPropValue);
+        }
+        
+        //objPropList = inst.listPropertyValues(objProp).toList();
+        //System.out.println(objPropList.get(0));
+        
 
         model.addAttribute("name", name);
         model.addAttribute("sourceList", sourceList);
         model.addAttribute("symptomList", symptomList);
+        model.addAttribute("influenceList", objPropList);
 
         return "editView";
     }
@@ -166,10 +170,32 @@ public class OntologyController {
         OntClass diseaseClass = diseaseOntModelService.getOntClass(path);
 
         Individual inst = diseaseOntModelService.getIndividual(origPath+ind);
+        System.out.println(inst.getLocalName() + " " +origPath+ind);
 
         OntProperty prop = diseaseOntModelService.getOntProperty(origPath+name);
+        System.out.println(prop.getLocalName() + " " +origPath+name);
 
         inst.removeProperty(prop, ResourceFactory.createPlainLiteral(value));
+
+        return new String("ok");
+    }
+
+    @RequestMapping(value="/deleteObjectProperty/{ind}/{name}/{value}", method=RequestMethod.GET)
+    public @ResponseBody String deleteObjectPropertyAction(Model model, @PathVariable("ind") String ind, @PathVariable("name") String name, @PathVariable("value") String value) {
+        
+        String origPath = "http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#";
+        String path = "http://www.semanticweb.org/alexey/ontologies/2014/2/medicines#Disease";
+
+        OntClass diseaseClass = diseaseOntModelService.getOntClass(path);
+
+        Individual inst = diseaseOntModelService.getIndividual(origPath+ind);
+        System.out.println(inst.getLocalName() + " " +origPath+ind);
+
+        ObjectProperty prop = diseaseOntModelService.getObjectProperty(origPath+name);
+        System.out.println(prop.getLocalName() + " " +origPath+name);
+        System.out.println(value);
+        diseaseOntModelService.remove(inst, prop, ResourceFactory.createPlainLiteral(value));
+        //inst.setPropertyValue(prop, ResourceFactory.createPlainLiteral(""));
 
         return new String("ok");
     }

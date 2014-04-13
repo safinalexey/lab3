@@ -18,7 +18,7 @@
                     <h4 class="modal-title" id="myModalLabel">Добавление объекта</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-inline" role="form">
+                    <form class="form-inline" role="form" accept-charset="UTF-8">
                         <div class="form-group">
                             <label for="indName">Имя объекта</label>
                             <input type="text" class="form-control" id="indName"/>
@@ -65,13 +65,54 @@
             <a type="button" class="btn btn-success" data-name="Disease" th:href="@{/edit/}+${disease}">Редактировать</a>
         </td>
         <td>
-            <a type="button" class="btn btn-danger" data-name="Disease" th:href="@{${disease}}">Удалить</a>
+            <a type="button" class="btn btn-danger" data-name="Disease" th:href="${disease}">Удалить</a>
         </td>
     </tr>
 	</table>
   </div>
   <div class="tab-pane" id="profile">
     <button type="button" class="btn btn-primary" style="margin: 20px 0;" data-toggle="modal" data-target="#myModal2">Добавить экземпляр</button>
+    <!-- Modal start-->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Добавление объекта</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline" role="form" accept-charset="UTF-8">
+                        <div class="form-group">
+                            <label for="indName2">Имя объекта</label>
+                            <input type="text" class="form-control" id="indName2"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary" id="addNewInd2">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#addNewInd2').on('click', function(e){
+            e.preventDefault()
+            ontClass = 'Organ'
+            name = $('#indName2').val()
+            url = '/add/'+ontClass+'/'+name
+            $.post(url, function(data){
+                if(data=='ok'){
+                    $('#myModal2').modal('hide')
+                    $('<tr><td></td><td>'+name+'</td><td></td></tr>').insertAfter('.organLine')
+                }
+            })
+
+        })
+    })
+    </script>
+    <!-- Modal end-->
 	<table class="table table-bordered table-hover" th:fragment="listorgan">
     <tr class="organLine">
         <th class="col-md-1"></th>
@@ -82,28 +123,66 @@
         <td></td>
         <td th:text="${organ}"></td>
         <td>
-            <a type="button" class="btn btn-danger" data-name="Disease" th:href="@{${organ}}">Удалить</a>
+            <a type="button" class="btn btn-danger" th:href="${organ}">Удалить</a>
         </td>
-    </tr>
-    <tr>
-        <td><input type="text" class="organName"/></td>
-        <td><a type="button" class="btn btn-success" href="#" id="addOrgan">Добавить экземпляр</a><span class="spO" style="transition: all 0.3s ease-out 0.1s;opacity: 0; color: red;margin-left:15px">экземпляр создан</span></td>
     </tr>
 	</table>
   </div>
   <div class="tab-pane" id="messages">
-	<table class="table table-bordered table-hover col-md-4" th:fragment="listmedicine">
+    <button type="button" class="btn btn-primary" style="margin: 20px 0;" data-toggle="modal" data-target="#myModal3">Добавить экземпляр</button>
+    <!-- Modal start-->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal3" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Добавление объекта</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline" role="form" accept-charset="UTF-8">
+                        <div class="form-group">
+                            <label for="indName3">Имя объекта</label>
+                            <input type="text" class="form-control" id="indName3"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal3">Закрыть</button>
+                    <button type="button" class="btn btn-primary" id="addNewInd3">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#addNewInd3').on('click', function(e){
+            e.preventDefault()
+            ontClass = 'Medicine'
+            name = $('#indName3').val()
+            url = '/add/'+ontClass+'/'+name
+            $.post(url, function(data){
+                if(data=='ok'){
+                    $('#myModal3').modal('hide')
+                    $('<tr><td></td><td>'+name+'</td><td></td></tr>').insertAfter('.medicineLine')
+                }
+            })
+
+        })
+    })
+    </script>
+    <!-- Modal end-->
+	<table class="table table-bordered table-hover" th:fragment="listmedicine">
     <tr class="medicineLine">
-        <th>name</th>
-        <th>action</th>
+        <th class="col-md-1"></th>
+        <th class="col-md-9">Имя</th>
+        <th class="col-md-1">Удаление</th>
     </tr>
     <tr th:each="medicine : ${medicineIndividuals}">
+        <td></td>
         <td th:text="${medicine}"></td>
-        <td><a type="button" class="close" aria-hidden="true" data-name="Medicine" th:href="@{${medicine}}">&times;</a></td>
-    </tr>
-    <tr>
-        <td><input type="text" class="medicineName"/></td>
-        <td><a type="button" class="btn btn-success" href="#" id="addMedicine">Добавить экземпляр</a><span class="spM" style="transition: all 0.3s ease-out 0.1s;opacity: 0; color: red;margin-left:15px">экземпляр создан</span></td>
+        <td>
+            <a type="button" class="btn btn-danger" th:href="${medicine}">Удалить</a>
+        </td>
     </tr>
 	</table>
   </div>
@@ -126,6 +205,16 @@
                     console.log(data)
                 })
             })
+
+        $('.btn-danger').on('click', function(e){
+            e.preventDefault()
+            lineToDel = $(this).parent().parent()
+            $.post('/delete/'+$(this).attr('href'), function(data){
+                if (data=='ok'){
+                    lineToDel.detach()
+                }
+            })
+        })
     })
 </script>
 </div>

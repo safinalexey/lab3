@@ -11,7 +11,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 @Configuration
 public class DiseaseOntModelBeanConfiguration {
 
-    private final static String ontPath = "file:///C:/1/med.owl";
+    private final static String ontPath = "1.owl";
 
     @Bean
     public OntModel diseaseOntModelService()

@@ -19,30 +19,42 @@
             <span th:text="${source}"/><a type="button" class="close delSource" aria-hidden="true" href="#">&times;</a>
         </li>
     </ul>
-    <form class="form-inline" role="form">
+    <form class="form-inline" role="form" accept-charset="UTF-8">
         <div class="form-group">
-            <label class="sr-only" for="exampleInputEmail2">Email address</label>
+            <label class="sr-only" for="sourceValue">Email address</label>
             <input type="text" class="form-control" id="sourceValue"/>
         </div>
         <button class="btn btn-success" id="addSource">Добавить</button>
     </form>
     <h4>Симптомы</h4>
-    <ul>
+    <ul id="symptomList">
         <li th:each="symptom : ${symptomList}">
-            <span th:text="${symptom}"/><a type="button" class="close" aria-hidden="true" href="#">&times;</a>
+            <span th:text="${symptom}"/><a type="button" class="close delSymptom" aria-hidden="true" href="#">&times;</a>
         </li>
     </ul>
-    <form class="form-inline" role="form">
+    <form class="form-inline" role="form" accept-charset="UTF-8">
         <div class="form-group">
-            <label class="sr-only" for="exampleInputEmail2">Email address</label>
-            <input type="text" class="form-control"/>
+            <label class="sr-only" for="symptomValue">Email address</label>
+            <input type="text" class="form-control" id="symptomValue"/>
         </div>
-        <button type="submit" class="btn btn-success">Добавить</button>
-        </form>
+        <button class="btn btn-success" id="addSymptom">Добавить</button>
+    </form>
+    <h4>Влияние</h4>
+    <ul id="influenceList">
+        <li th:each="influence : ${influenceList}">
+            <span th:text="${influence}"/><a type="button" class="close delInfluence" aria-hidden="true" href="#">&times;</a>
+        </li>
+    </ul>
+    <!-- <form class="form-inline" role="form">
+        <div class="form-group">
+            <label class="sr-only" for="influenceValue">Email address</label>
+            <input type="text" class="form-control" id="influenceValue"/>
+        </div>
+        <button class="btn btn-success" id="addInfluence">Добавить</button>
+    </form> -->
     <hr />
     <form class="form-inline" role="form">
         <a type="button" href="/" class="btn btn-success">Сохранить</a>
-        <a type="button" class="btn btn-danger">Удалить объект</a>
     </form>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -65,6 +77,64 @@
                 ths = $(this)
                 ind = $('h3').text()
                 name = 'source'
+                value = $(this).parent().find('span').text()
+                url = '/deleteProperty/'+ind+'/'+name+'/'+value
+                $.post(url,function(data){
+                    if(data=='ok')
+                    {
+                        ths.parent().detach()
+                    }
+                })
+            })
+
+            $('#addSymptom').on('click',function(e){
+                e.preventDefault()
+                ind = $('h3').text()
+                name = 'symptoms'
+                value = $('#symptomValue').val()
+                url = '/saveProperty/'+ind+'/'+name+'/'+value
+                $.post(url,function(data){
+                    if(data=='ok')
+                    {
+                        $('#symptomList li:last').append("<li><span>"+value+"</span></li>")
+                    }
+                })
+            })
+
+            $('.delSymptom').on('click',function(e){
+                e.preventDefault()
+                ths = $(this)
+                ind = $('h3').text()
+                name = 'symptoms'
+                value = $(this).parent().find('span').text()
+                url = '/deleteProperty/'+ind+'/'+name+'/'+value
+                $.post(url,function(data){
+                    if(data=='ok')
+                    {
+                        ths.parent().detach()
+                    }
+                })
+            })
+
+            // $('#addSymptom').on('click',function(e){
+            //     e.preventDefault()
+            //     ind = $('h3').text()
+            //     name = 'symptoms'
+            //     value = $('#symptomValue').val()
+            //     url = '/saveProperty/'+ind+'/'+name+'/'+value
+            //     $.post(url,function(data){
+            //         if(data=='ok')
+            //         {
+            //             $('#symptomList li:last').append("<li><span>"+value+"</span></li>")
+            //         }
+            //     })
+            // })
+
+            $('.delInfluence').on('click',function(e){
+                e.preventDefault()
+                ths = $(this)
+                ind = $('h3').text()
+                name = 'has_influence'
                 value = $(this).parent().find('span').text()
                 url = '/deleteProperty/'+ind+'/'+name+'/'+value
                 $.post(url,function(data){
